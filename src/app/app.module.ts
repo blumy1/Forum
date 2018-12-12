@@ -9,6 +9,9 @@ import { TopNavbarComponent } from './top-navbar/top-navbar.component';
 import { CategoryComponent } from './category/category.component';
 import { SubcategoryComponent } from './subcategory/subcategory.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+import { ThreadsComponent } from './threads/threads.component';
+import { ThreadLabelComponent } from './thread-label/thread-label.component';
+import { ThreadComponent } from './thread/thread.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
     CategoryComponent,
     SubcategoryComponent,
     BreadcrumbsComponent,
+    ThreadsComponent,
+    ThreadLabelComponent,
+    ThreadComponent,
   ],
   imports: [
     BrowserModule,

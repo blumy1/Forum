@@ -1,8 +1,13 @@
 .breadcrum-container {
-  margin-top: 20px;
   background-color: #43A6DF;
 }
 
 .breadcrumb-link {
-  color: #FFFFFF;
+  color: #2E3539;
+}
+
+.breadcrumb {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  background: transparent;
 }
