@@ -1,0 +1,13 @@
+.category-container {
+  margin-top: 20px;
+  background-color: #E4E4E4;
+  border-radius: 2px;
+  padding: 0 1px 1px 1px;
+}
+
+.category-header {
+  background-color: #43A6DF;
+  padding: 10px;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+}

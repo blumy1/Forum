@@ -1,0 +1,37 @@
+.subcategory-container {
+  background-color: #FFFFFF;
+  color: #2E3539;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 1px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.subcategory-container-info a {
+  color: #2E3539;
+}
+
+.subcategory-container-info {
+  width: 85%;
+  margin-left: 10px;
+  color: #969696;
+  display: flex;
+  flex-direction: column;
+}
+
+.subcategory-container-info .info {
+  margin-right: 10px;
+  font-size: 0.8em
+}
+
+.user-container-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8em;
+  align-self: center;
+}
+
+.info-date {
+  color: #969696;
+}
