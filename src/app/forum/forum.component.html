@@ -1,6 +1,6 @@
-<div class="container-fluid">
-  <div class="row justify-content-center">
-    <div class="col-11">
+<div class="container">
+  <div class="forum">
       <app-category *ngFor="let category of categories" [category]="category"></app-category>
-    </div>
+  </div>
+  <app-sidebar class="sidebar"></app-sidebar>
 </div>

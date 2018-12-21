@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="user-info">
+    <img [src]="getUserAvatar()" alt="">
+    <a href="#">{{post.author.username}}</a>
+    <span>{{post.author.rank.name}}</span>
+  </div>
+  <div class="post">
+    <div class="post-text">
+        {{post.text}}
+    </div>
+    <div class="post-date">
+      {{post.createdAt}}
+    </div>
+  </div>
+</div>

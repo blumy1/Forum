@@ -1,11 +1,9 @@
-<div class="container-fluid">
-  <div class="row justify-content-center">
-    <div class="col-11">
-      <div class="threads-container">
-        <div class="threads-header">
-          {{subcategory.name}}
-        </div>
-        <app-thread-label *ngFor="let thread of threads" [thread]="thread"></app-thread-label>
-      </div>
-    </div>
+<button class="add-thread">
+  New thread
+</button>
+<div class="container">
+  <div class="container-header">
+    {{subcategory?.name}}
   </div>
+  <app-thread-label *ngFor="let thread of threads" [thread]="thread"></app-thread-label>
+</div>

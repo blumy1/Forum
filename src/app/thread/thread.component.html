@@ -1,3 +1,6 @@
-<p>
-  thread works!
-</p>
+<div class="container-title">
+  {{thread?.title}}
+</div>
+<div *ngFor="let post of posts">
+  <app-post [post]="post"></app-post>
+</div>

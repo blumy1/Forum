@@ -12,6 +12,8 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { ThreadsComponent } from './threads/threads.component';
 import { ThreadLabelComponent } from './thread-label/thread-label.component';
 import { ThreadComponent } from './thread/thread.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { ThreadComponent } from './thread/thread.component';
     ThreadsComponent,
     ThreadLabelComponent,
     ThreadComponent,
+    SidebarComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,

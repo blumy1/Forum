@@ -1,13 +1,34 @@
-.breadcrum-container {
-  background-color: #43A6DF;
-}
-
-.breadcrumb-link {
-  color: #2E3539;
-}
-
 .breadcrumb {
-  margin-top: 15px;
-  margin-bottom: 5px;
-  background: transparent;
+  padding: 10px 16px;
+  list-style: none;
+}
+
+.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+.breadcrumb li.breadcrumb-item:after {
+  padding: 8px;
+  color: #2E3539;
+  content: "/";
+  font-family: 'Roboto', sans-serif;
+}
+
+  .breadcrumb li.active {
+  color: #2E3539;
+  font-size: 0.9em;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+}
+
+.breadcrumb li a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9em;
+  color: #2E749C;
+  text-decoration: none;
+}
+
+.breadcrumb li a:hover {
+  text-decoration: underline;
 }

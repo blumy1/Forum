@@ -1,11 +1,11 @@
-<div class="subcategory-container">
-  <div class="subcategory-container-info">
+<div class="container">
+  <div class="container-info">
     <a routerLink="/forum/{{subcategory.id}}/{{subcategory.slug}}" class="title">{{subcategory.name}}</a>
     <span class="info">Threads: {{subcategory.threadsAmount}}</span>
     <span class="info">Posts: {{subcategory.postsAmount}}</span>
   </div>
-  <div class="user-container-info" *ngIf="lastPost">
+  <div class="last-post" *ngIf="lastPost">
     <span>Latest: <a href="#">{{lastPost.thread.title}}</a></span>
-    <div><a href="#">{{lastPost.author.username}}</a>, <span class="info-date">{{lastPost.createdAt}}</span></div>
+    <div><a href="#">{{lastPost.author.username}}</a>, <span class="last-post-date">{{lastPost.createdAt}}</span></div>
   </div>
 </div>

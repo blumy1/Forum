@@ -1,12 +1,12 @@
-.category-container {
+.container {
   margin-bottom: 20px;
   background-color: #E4E4E4;
-  border-radius: 2px;
+  border-radius: 5px;
   padding: 0 1px 1px 1px;
 }
 
-.category-header {
-  background-color: #43A6DF;
+.container-header {
+  background-color: #2E749C;
   padding: 10px;
   color: #FFFFFF;
   font-family: 'Roboto', sans-serif;

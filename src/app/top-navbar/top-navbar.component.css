@@ -1,11 +1,8 @@
-.navbar {
-  background-color: #2E3539;
+.container {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 20px;
+  background-color: #2E749C;
   color: #FFFFFF;
-}
-
-.btn-outline {
-  background-color: transparent;
-  color: #43A6DF;
-  border: 1px solid #43A6DF;
-  border-radius: 6px;
+  border-radius: 2px;
+  padding: 20px;
 }

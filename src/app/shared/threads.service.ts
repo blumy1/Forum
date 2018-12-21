@@ -17,15 +17,19 @@ export class ThreadsService {
     return this.http.get<Thread[]>(this.threadUrl);
   }
 
-  getThread(): Observable<Thread> {
-    return null;
+  getThread(threadId: number): Observable<Thread> {
+    return this.http.get<Thread>(this.threadUrl + '/' + threadId);
   }
 
-  getThreadPosts(): Observable<Post[]> {
-    return null;
+  getThreadPosts(threadId: number): Observable<Post[]> {
+    return this.http.get<Post[]>(this.threadUrl + '/' + threadId + '/posts');
   }
 
-  getThreadPost(): Observable<Post> {
-    return this.http.get<Post>(this.threadUrl);
+  getThreadPost(threadId: number, postId: number): Observable<Post> {
+    return this.http.get<Post>(this.threadUrl + '/' + threadId + '/posts/' + postId);
+  }
+
+  getLastThreadPost(thradId: number): Observable<Post> {
+    return this.http.get<Post>(this.threadUrl + '/' + thradId + '/posts/last');
   }
 }
