@@ -14,6 +14,7 @@ import { ThreadLabelComponent } from './thread-label/thread-label.component';
 import { ThreadComponent } from './thread/thread.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PostComponent } from './post/post.component';
+import { CreateThreadComponent } from './create-thread/create-thread.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { PostComponent } from './post/post.component';
     ThreadComponent,
     SidebarComponent,
     PostComponent,
+    CreateThreadComponent,
   ],
   imports: [
     BrowserModule,

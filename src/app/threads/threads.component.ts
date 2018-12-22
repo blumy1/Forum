@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Thread } from '../models/Thread';
 import { CategoriesService } from '../shared/categories.service';
 import { Subcategory } from '../models/Subcategory';
@@ -11,7 +11,7 @@ import { Subcategory } from '../models/Subcategory';
 })
 export class ThreadsComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private categoriesService: CategoriesService) { }
+  constructor(private route: ActivatedRoute, private categoriesService: CategoriesService, private router: Router) { }
 
   subcategoryId: number;
   threads: Thread[];
@@ -23,6 +23,10 @@ export class ThreadsComponent implements OnInit {
 
   getSubcategory() {
     this.categoriesService.getSubcategory(this.subcategoryId).subscribe(subcategory => this.subcategory = subcategory);
+  }
+
+  getCreateCurrentUrl(): string {
+    return this.router.url + '/create';
   }
 
   ngOnInit() {

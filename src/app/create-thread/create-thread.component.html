@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="container-header">
+    <span>New Thread</span>
+  </div>
+  <div class="container-post">
+    <form id="post-form">
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title"><br>
+      <div class="container-message">
+        <div class="tools-bar">
+          <div class="font-config">
+            <select name="Font name" id="fontName">
+              <option value="arial">Arial</option>
+              <option value="times new roman">Times New Roman</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </select>
+            <select name="Font size" id="fontSize">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+            <select name="Font color" id="fontColor">
+              <option value="A">A</option>
+            </select>
+          </div>
+          <div class="formating-text">
+            <div class="tools-section">
+              <button type="button"><img src="../../assets/tools/bold_icon.png" alt="Bold" title="Bold"></button>
+              <button type="button"><img src="../../assets/tools/italic_icon.png" alt="Italic" title="Italic"></button>
+              <button type="button"><img src="../../assets/tools/underlined_icon.png" alt="Underlined" title="Underlined"></button>
+            </div>
+            <div class="tools-section">
+              <button type="button"><img src="../../assets/tools/align_left_icon.png" alt="Align left" title="Align left"></button>
+              <button type="button"><img src="../../assets/tools/align_center_icon.png" alt="Align center" title="Align center"></button>
+              <button type="button"><img src="../../assets/tools/align_right_icon.png" alt="Align right" title="Align right"></button>
+              <button type="button"><img src="../../assets/tools/align_justify_icon.png" alt="Align justify" title="Align justify"></button>
+            </div>
+            <div class="tools-section">
+              <button type="button"><img src="../../assets/tools/link_icon.png" alt="List unordered" title="List unordered"></button>
+              <button type="button"><img src="../../assets/tools/quote_icon.png" alt="List numbered" title="List numbered"></button>
+              <button type="button"><img src="../../assets/tools/code_icon.png" alt="List numbered rtl" title="List numbered rtl"></button>
+              <button type="button"><img src="../../assets/tools/photo_icon.png" alt="List numbered rtl" title="List numbered rtl"></button>
+            </div>
+          </div>
+        </div>
+        <textarea name="message" form="post-form"></textarea>
+      </div>
+      <input type="submit" value="Create new thread">
+      <button class="preview-button">Post preview</button>
+    </form>
+  </div>
+</div>
