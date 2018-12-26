@@ -45,3 +45,35 @@
   color: #969696;
   font-size: 0.8em;
 }
+
+.post-text img {
+  max-width: 100%;
+  height: auto;
+}
+
+.post-text blockquote {
+  background: #F2F2F2;
+  display: inline-block;
+  padding: 13px;
+  border: 1px solid #969696;
+  border-radius: 2px;
+}
+
+.post-text blockquote .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.post-text blockquote .author {
+  align-self: flex-end;
+  padding: 5px 5px 0 5px;
+}
+
+
+.post-text code {
+  display: inline-block;
+  padding: 8px;
+  border: 1px solid #969696;
+  border-radius: 2px;
+}

@@ -15,6 +15,7 @@ import { ThreadComponent } from './thread/thread.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PostComponent } from './post/post.component';
 import { CreateThreadComponent } from './create-thread/create-thread.component';
+import { MarkdownPipe } from './shared/markdown.pipe';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { CreateThreadComponent } from './create-thread/create-thread.component';
     SidebarComponent,
     PostComponent,
     CreateThreadComponent,
+    MarkdownPipe,
   ],
   imports: [
     BrowserModule,

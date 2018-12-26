@@ -16,10 +16,7 @@
               <option value="audi">Audi</option>
             </select>
             <select name="Font size" id="fontSize">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
+              <option *ngFor="let number of [1,2,3,4,5,6,7]" value="{{number}}">{{number}}</option>
             </select>
             <select name="Font color" id="fontColor">
               <option value="A">A</option>
@@ -38,10 +35,10 @@
               <button type="button"><img src="../../assets/tools/align_justify_icon.png" alt="Align justify" title="Align justify"></button>
             </div>
             <div class="tools-section">
-              <button type="button"><img src="../../assets/tools/link_icon.png" alt="List unordered" title="List unordered"></button>
-              <button type="button"><img src="../../assets/tools/quote_icon.png" alt="List numbered" title="List numbered"></button>
-              <button type="button"><img src="../../assets/tools/code_icon.png" alt="List numbered rtl" title="List numbered rtl"></button>
-              <button type="button"><img src="../../assets/tools/photo_icon.png" alt="List numbered rtl" title="List numbered rtl"></button>
+              <button type="button"><img src="../../assets/tools/link_icon.png" alt="Link" title="Link"></button>
+              <button type="button"><img src="../../assets/tools/quote_icon.png" alt="Quote" title="Quote"></button>
+              <button type="button"><img src="../../assets/tools/code_icon.png" alt="Code" title="Code"></button>
+              <button type="button"><img src="../../assets/tools/photo_icon.png" alt="Image" title="Image"></button>
             </div>
           </div>
         </div>
