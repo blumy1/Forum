@@ -5,4 +5,65 @@
   color: #FFFFFF;
   border-radius: 2px;
   padding: 20px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container-brand {
+  font-size: 1.4em;
+  margin-right: auto;
+}
+
+.container-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container-login {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container-user img {
+  max-width: 25px;
+  max-height: 25px;
+  margin-right: 4px;
+}
+
+.username {
+  margin-right: 25px;
+  font-size: 1.1em;
+}
+
+.btn-action {
+  padding: 10px 15px 10px 15px;
+  border-radius: 5px;
+  color: #FFFFFF;
+  background: #FF9000;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: .9em;
+  margin-right: 10px;
+}
+
+.btn-action:hover {
+  cursor: pointer;
+}
+
+.btn-action-bordered {
+  padding: 9px 14px 9px 14px;
+  border-radius: 5px;
+  color: #FFFFFF;
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: .9em;
+}
+
+.btn-action-bordered:hover {
+  cursor: pointer;
 }

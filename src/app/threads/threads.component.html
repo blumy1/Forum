@@ -1,4 +1,4 @@
-<button class="add-thread" routerLink="{{getCreateCurrentUrl()}}">
+<button *ngIf="isLoggedIn$ | async" class="add-thread" routerLink="{{getCreateCurrentUrl()}}">
   New thread
 </button>
 <div class="container">

@@ -2,4 +2,16 @@
   <div class="container-brand">
     Forum
   </div>
+  <div *ngIf="isLoggedIn$ | async; else displayLogin" class="container-user">
+    <img [src]="getUserAvatar()" width="25" height="25">
+    <span class="username">{{user?.username}}</span>
+    <button (click)="logout()" class="btn-action">Logout</button>
+  </div>
+
+  <ng-template #displayLogin>
+    <div class="container-login">
+        <button routerLink="/login" class="btn-action">Log In</button>
+        <button class="btn-action-bordered">Sign Up</button>
+    </div>
+  </ng-template>
 </nav>

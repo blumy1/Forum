@@ -3,48 +3,72 @@
     <span>New Thread</span>
   </div>
   <div class="container-post">
-    <form id="post-form">
+    <form [formGroup]="threadForm" id="post-form">
       <label for="title">Title</label>
-      <input type="text" name="title" id="title"><br>
+      <input type="text" name="title" id="title" formControlName="title"><br>
+      <!-- <div class="error" *ngIf="title?.errors['required'] && title.touched">
+        The title is required.
+      </div>
+      <div class="error" *ngIf="title?.errors['minlength'] && title.touched">
+        Title must be at least 3 characters long.
+      </div>
+      <div class="error" *ngIf="title?.errors['maxlength'] && title.touched">
+        Title can have a maximum length of 30 characters.
+      </div> -->
       <div class="container-message">
         <div class="tools-bar">
           <div class="font-config">
-            <select name="Font name" id="fontName">
-              <option value="arial">Arial</option>
-              <option value="times new roman">Times New Roman</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
+            <select #fontFamily (change)="setFontFamily(fontFamily.value)" name="Font name" id="fontName">
+              <option value="" disabled selected hidden>Font</option>
+              <option *ngFor="let font of availableFontFamilies" value="{{font}}">{{font}}</option>
             </select>
-            <select name="Font size" id="fontSize">
+            <select #fontSize (change)="setFontSize(fontSize.value)" name="Font size" id="fontSize">
+              <option value="" disabled selected hidden>Size</option>
               <option *ngFor="let number of [1,2,3,4,5,6,7]" value="{{number}}">{{number}}</option>
             </select>
-            <select name="Font color" id="fontColor">
-              <option value="A">A</option>
-            </select>
+            <input #fontColor (change)="setFontColor(fontColor.value)" type="color" value="#2E3539">
           </div>
           <div class="formating-text">
             <div class="tools-section">
-              <button type="button"><img src="../../assets/tools/bold_icon.png" alt="Bold" title="Bold"></button>
-              <button type="button"><img src="../../assets/tools/italic_icon.png" alt="Italic" title="Italic"></button>
-              <button type="button"><img src="../../assets/tools/underlined_icon.png" alt="Underlined" title="Underlined"></button>
+              <button type="button" (click)="markdownText('B')"><img src="../../assets/tools/bold_icon.png" alt="Bold"
+                  title="Bold"></button>
+              <button type="button" (click)="markdownText('I')"><img src="../../assets/tools/italic_icon.png" alt="Italic"
+                  title="Italic"></button>
+              <button type="button" (click)="markdownText('U')"><img src="../../assets/tools/underlined_icon.png" alt="Underlined"
+                  title="Underlined"></button>
             </div>
             <div class="tools-section">
-              <button type="button"><img src="../../assets/tools/align_left_icon.png" alt="Align left" title="Align left"></button>
-              <button type="button"><img src="../../assets/tools/align_center_icon.png" alt="Align center" title="Align center"></button>
-              <button type="button"><img src="../../assets/tools/align_right_icon.png" alt="Align right" title="Align right"></button>
-              <button type="button"><img src="../../assets/tools/align_justify_icon.png" alt="Align justify" title="Align justify"></button>
+              <button type="button" (click)="markdownText('LEFT')"><img src="../../assets/tools/align_left_icon.png"
+                  alt="Align left" title="Align left"></button>
+              <button type="button" (click)="markdownText('CENTER')"><img src="../../assets/tools/align_center_icon.png"
+                  alt="Align center" title="Align center"></button>
+              <button type="button" (click)="markdownText('RIGHT')"><img src="../../assets/tools/align_right_icon.png"
+                  alt="Align right" title="Align right"></button>
+              <button type="button" (click)="markdownText('JUSTIFY')"><img src="../../assets/tools/align_justify_icon.png"
+                  alt="Align justify" title="Align justify"></button>
             </div>
             <div class="tools-section">
-              <button type="button"><img src="../../assets/tools/link_icon.png" alt="Link" title="Link"></button>
-              <button type="button"><img src="../../assets/tools/quote_icon.png" alt="Quote" title="Quote"></button>
-              <button type="button"><img src="../../assets/tools/code_icon.png" alt="Code" title="Code"></button>
-              <button type="button"><img src="../../assets/tools/photo_icon.png" alt="Image" title="Image"></button>
+              <button type="button" (click)="insertLink('google.com', 'google')"><img src="../../assets/tools/link_icon.png"
+                  alt="Link" title="Link"></button>
+              <button type="button" (click)="insertQuote('syzak', 'blabla')"><img src="../../assets/tools/quote_icon.png"
+                  alt="Quote" title="Quote"></button>
+              <button type="button" (click)="markdownText('CODE')"><img src="../../assets/tools/code_icon.png" alt="Code"
+                  title="Code"></button>
+              <button type="button" (click)="insertImage('google.com/img')"><img src="../../assets/tools/photo_icon.png"
+                  alt="Image" title="Image"></button>
             </div>
           </div>
         </div>
-        <textarea name="message" form="post-form"></textarea>
+        <textarea #message name="message" form="post-form" [(ngModel)]="text" (click)="getPointerPosition()" (keyup)="getPointerPosition()"
+          formControlName="message"></textarea>
+        <!-- <div class="error" *ngIf="message.errors?.minlength && (message.dirty || message.touched)">
+          Message must be at least 2 characters long.
+        </div>
+        <div class="error" *ngIf="message?.invalid && (message.dirty || message.touched)">
+          The title is incorrect
+        </div> -->
       </div>
-      <input type="submit" value="Create new thread">
+      <input [disabled]="threadForm?.invalid" type="submit" value="Create new thread">
       <button class="preview-button">Post preview</button>
     </form>
   </div>

@@ -48,7 +48,7 @@ export class MarkdownPipe implements PipeTransform {
   }
 
   regexFontFamily(text: string): string {
-    const pattern = /\[FONT="?(\w+)"?](.*?)\[\/FONT]/gmi;
+    const pattern = /\[FONT="?([\w ]+)"?](.*?)\[\/FONT]/gmi;
     return text.replace(pattern, '<font face="$1">$2</font>');
   }
 

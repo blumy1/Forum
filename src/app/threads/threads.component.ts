@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Thread } from '../models/Thread';
 import { CategoriesService } from '../shared/categories.service';
 import { Subcategory } from '../models/Subcategory';
+import { AuthService } from '../shared/auth.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-threads',
@@ -11,11 +13,15 @@ import { Subcategory } from '../models/Subcategory';
 })
 export class ThreadsComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private categoriesService: CategoriesService, private router: Router) { }
+  constructor(private route: ActivatedRoute,
+    private categoriesService: CategoriesService,
+    private router: Router,
+    private auth: AuthService) { }
 
   subcategoryId: number;
   threads: Thread[];
   subcategory: Subcategory;
+  isLoggedIn$: Observable<boolean>;
 
   getThreads() {
     this.categoriesService.getSubcategoryThreads(this.subcategoryId).subscribe(threads => this.threads = threads);
@@ -35,6 +41,7 @@ export class ThreadsComponent implements OnInit {
    });
    this.getThreads();
    this.getSubcategory();
+   this.isLoggedIn$ = this.auth.isLoggedIn;
   }
 
 }
