@@ -3,6 +3,130 @@
   padding: 15px;
   color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
-  margin-bottom: 20px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+
+#title {
+  border-radius: 2px;
+  border: 1px solid #2E749C;
+  width: 300px;
+  margin-bottom: 15px;
+  font-size: .85em;
+  padding: 5px;
+}
+
+label {
+  display: block;
+  color: #2E3539;
+  margin-bottom: 4px;
+}
+
+.container-message {
+  margin-bottom: 15px;
+  background-color: transparent;
   border-radius: 5px;
+  padding: 0 1px 1px 1px;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+.tools-bar {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #2E749C;
+  padding: 5px 10px 5px 10px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tools-bar button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-right: 3px;
+}
+
+.tools-bar button img {
+  width: 16px;
+}
+
+.formating-text, .font-config {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.font-config {
+  margin: 5px 0 5px 0;
+}
+
+.font-config select{
+  margin-right: 10px;
+  background: transparent;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  padding: 5px 7px 5px 5px;
+}
+
+.font-config select option {
+  background: #E4E4E4;
+  color: #2E3539;
+}
+
+textarea {
+  box-sizing: border-box;
+  resize: none;
+  width: 100%;
+  height: 150px;
+  font-family: 'Roboto', sans-serif;
+  border: 1px solid #2E749C;
+  font-size: .85em;
+}
+
+.tools-section {
+  margin: 5px 0 5px 0;
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid #FFFFFF;
+  padding: 5px 4px 1px 7px;
+  font-family: 'Roboto', sans-serif;
+  margin-right: 10px;
+}
+
+input[type="submit"], .preview-button {
+  padding: 10px;
+  border-radius: 5px;
+  color: #FFFFFF;
+  background: #FF9000;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: .9em;
+  margin: 0 0 5px 5px;
+}
+
+input[type="color"] {
+  width: 20px;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid #FFFFFF;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+button:hover, input[type="submit"] {
+  cursor: pointer;
+}
+
+.error {
+  display: inline-block;
+  background: #F2DEDE;
+  color: #A94442;
+  border: 1px solid #A94442;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 10px;
 }

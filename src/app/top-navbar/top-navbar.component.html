@@ -1,6 +1,6 @@
 <nav class="container">
   <div class="container-brand">
-    Forum
+    <a routerLink="/">Forum</a>
   </div>
   <div *ngIf="isLoggedIn$ | async; else displayLogin" class="container-user">
     <img [src]="getUserAvatar()" width="25" height="25">
@@ -11,7 +11,7 @@
   <ng-template #displayLogin>
     <div class="container-login">
         <button routerLink="/login" class="btn-action">Log In</button>
-        <button class="btn-action-bordered">Sign Up</button>
+        <button routerLink="/register" class="btn-action-bordered">Sign Up</button>
     </div>
   </ng-template>
 </nav>

@@ -10,4 +10,6 @@
   padding: 10px;
   color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }

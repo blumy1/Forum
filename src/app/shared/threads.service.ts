@@ -21,6 +21,10 @@ export class ThreadsService {
     return this.http.get<Thread>(this.threadUrl + '/' + threadId);
   }
 
+  getLastThread(): Observable<Thread> {
+    return this.http.get<Thread>(this.threadUrl + '/last');
+  }
+
   getThreadPosts(threadId: number): Observable<Post[]> {
     return this.http.get<Post[]>(this.threadUrl + '/' + threadId + '/posts');
   }
@@ -31,5 +35,13 @@ export class ThreadsService {
 
   getLastThreadPost(thradId: number): Observable<Post> {
     return this.http.get<Post>(this.threadUrl + '/' + thradId + '/posts/last');
+  }
+
+  createThread(thread: Thread): Observable<Thread> {
+    return this.http.post<Thread>(this.threadUrl, thread);
+  }
+
+  createThreadPost(post: Post): Observable<Post> {
+    return this.http.post<Post>(this.threadUrl + '/' + post.thread.id + '/posts', post);
   }
 }

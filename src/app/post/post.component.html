@@ -1,8 +1,8 @@
 <div class="container">
   <div class="user-info">
     <img [src]="getUserAvatar()" alt="">
-    <a href="#">{{post.author.username}}</a>
-    <span>{{post.author.rank.name}}</span>
+    <a href="#">{{post.author?.username}}</a>
+    <span>{{post.author?.rank.name}}</span>
   </div>
   <div class="post">
     <div class="post-text" [innerHTML]="post.text | appMarkdown"></div>

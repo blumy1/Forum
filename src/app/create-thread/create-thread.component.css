@@ -107,7 +107,7 @@ textarea {
 }
 
 input[type="submit"], .preview-button {
-  padding: 7px;
+  padding: 10px;
   border-radius: 5px;
   color: #FFFFFF;
   background: #FF9000;
