@@ -67,20 +67,20 @@ export class CreateThreadComponent implements OnInit {
 
   insertLink(url: string, value: string) {
     this.text = this.text.slice(0, this.selectionStart) +
-    `[URL=${url}]` + value +
+    `[URL=""]` + value +
     '[/URL]' + this.text.slice(this.selectionEnd);
   }
 
   insertQuote(author: string, value: string) {
     this.text = this.text.slice(0, this.selectionStart) +
-    `[QUOTE=${author}]` + value +
+    `[QUOTE=""]` + "" +
     '[/QUOTE]' + this.text.slice(this.selectionEnd);
   }
 
   insertImage(url: string) {
     this.text = this.text.slice(0, this.selectionStart) +
-    `[IMAGE]` + url +
-    '[/IMAGE]' + this.text.slice(this.selectionEnd);
+    `[IMG]` + "" +
+    '[/IMG]' + this.text.slice(this.selectionEnd);
   }
 
   ngOnInit() {
@@ -96,7 +96,7 @@ export class CreateThreadComponent implements OnInit {
       ]],
       message: ['', [
         Validators.required,
-        Validators.maxLength(400),
+        Validators.maxLength(5000),
         Validators.minLength(2)
       ]]
     });

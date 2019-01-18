@@ -20,6 +20,10 @@ export class AuthService {
     return this.http.post<User>(this.userUrl + 'login', {username, password});
   }
 
+  register(username, email, password) {
+    return this.http.post<User>(this.userUrl, {username, email, password});
+  }
+
   setLoggedIn(value: boolean) {
     this.loggedInStatus.next(value);
   }

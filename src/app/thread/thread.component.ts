@@ -79,20 +79,20 @@ export class ThreadComponent implements OnInit {
 
   insertLink(url: string, value: string) {
     this.text = this.text.slice(0, this.selectionStart) +
-    `[URL=${url}]` + value +
+    `[URL=""]` + "" +
     '[/URL]' + this.text.slice(this.selectionEnd);
   }
 
   insertQuote(author: string, value: string) {
     this.text = this.text.slice(0, this.selectionStart) +
-    `[QUOTE=${author}]` + value +
+    `[QUOTE=""]` + "" +
     '[/QUOTE]' + this.text.slice(this.selectionEnd);
   }
 
   insertImage(url: string) {
     this.text = this.text.slice(0, this.selectionStart) +
-    `[IMAGE]` + url +
-    '[/IMAGE]' + this.text.slice(this.selectionEnd);
+    `[IMG]` + "" +
+    '[/IMG]' + this.text.slice(this.selectionEnd);
   }
 
   addPost(event) {
@@ -136,7 +136,7 @@ export class ThreadComponent implements OnInit {
     this.postForm = this.formBuilder.group({
       message: ['', [
         Validators.required,
-        Validators.maxLength(400),
+        Validators.maxLength(4000),
         Validators.minLength(2)
       ]]
     });
